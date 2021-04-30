@@ -1,0 +1,38 @@
+.Button {
+  position: relative;
+  min-width: 160px;
+  display: inline-block;
+  vertical-align: bottom;
+  background-color: color(black);
+  border-radius: 2px;
+  cursor: pointer;
+  @include text($white, $baseFontSize, $normal, 1.2);
+  text-align: center;
+  text-decoration: none;
+  padding: 1em 2em;
+  transition: background-color 0.25s ease;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--primary {
+    background-color: color(primary);
+
+    &:hover {
+      background-color: darken(color(primary), 5%);
+    }
+  }
+
+  &--secondary {
+    background-color: color(secondary);
+
+    &:hover {
+      background-color: darken(color(secondary), 5%);
+    }
+  }
+}
