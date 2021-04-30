@@ -1,0 +1,109 @@
+.Form {
+  position: relative;
+  display: block;
+
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="text"],
+  button,
+  select,
+  textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  input[type="submit"] {
+    width: auto;
+  }
+
+  input:read-only {
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include respondTo(xs) {
+      flex-direction: column;
+    }
+  }
+
+  &-label {
+    @include text($white, $baseFontSize);
+  }
+
+  &-input,
+  &-select,
+  &-textarea {
+    font-family: $Roboto;
+    @include text($black, $baseFontSize);
+    background-color: $white;
+    border: 1px solid $white;
+    border-radius: 2px;
+    padding: 0.75em 1em;
+    margin: 0;
+    @include transition(border-color);
+
+    &:read-only {
+      background-color: $white;
+    }
+
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    &::placeholder {
+      font-family: $Roboto;
+      color: $grey;
+      opacity: 1; /* Firefox */
+      @include transition();
+    }
+
+    &::-webkit-input-placeholder {
+      font-family: $Roboto;
+      color: $grey;
+      @include transition();
+    }
+
+    &::-moz-placeholder {
+      font-family: $Roboto;
+      color: $grey;
+      @include transition();
+    }
+
+    &:-moz-placeholder {
+      font-family: $Roboto;
+      color: $grey;
+      @include transition();
+    }
+
+    /* Microsoft Edge */
+    &::-ms-input-placeholder {
+      font-family: $Roboto;
+      color: $grey;
+      @include transition();
+    }
+
+    /* Internet Explorer 10-11 */
+    &:-ms-input-placeholder {
+      font-family: $Roboto;
+      color: $grey;
+      @include transition();
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      border-color: $colorPrimary;
+      outline: none;
+    }
+
+    @include respondTo(xs) {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  }
+}

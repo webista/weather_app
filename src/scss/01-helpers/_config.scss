@@ -1,0 +1,33 @@
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1400px
+);
+
+$colors: (
+  primary: #ff7f7f,
+  secondary: #516cf0,
+  success: #05c932,
+  danger: #ff424c,
+  warning: #ffc107,
+  info: #08a9c2,
+  black: #000,
+  black--light: #303030,
+  blue--light: #c2e0ff,
+  grey: #a4a4a4,
+  grey--dark: #444444,
+  grey--light: #e0e0e0,
+  white: #fff
+);
+
+$spacings: (4, 8, 16, 20, 32, 40);
+
+$z-indexes: (
+  bottomless-pit: -9999,
+  default: 1,
+  dropdown: 3000,
+  overlay: 4000,
+  modal: 4001
+);
