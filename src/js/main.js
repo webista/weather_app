@@ -48,7 +48,7 @@ const searchWeather = (ev) => {
     return;
   }
 
-  const URL = "http://api.openweathermap.org/data/2.5/weather?q=" + CITY_NAME + "&units=metric&appid=" + APP_ID;
+  const URL = "https://api.openweathermap.org/data/2.5/weather?q=" + CITY_NAME + "&units=metric&appid=" + APP_ID;
 
   // setTimeout here for Loader visibility only
   setTimeout(() => {
