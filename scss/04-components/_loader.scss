@@ -1,0 +1,37 @@
+.Loader {
+  display: block;
+  @include centerBlock();
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    // border: 6px solid color(primary);
+    border-top: 6px solid color(primary);
+    border-radius: 50%;
+    animation: spinLoader 1.2s linear infinite;
+  }
+
+  &::after {
+    display: block;
+    @include text(color(white), $baseFontSize, $normal, 1);
+    margin-top: 10px;
+  }
+
+  &--data {
+    &::after {
+      content: "Loading data...";
+    }
+  }
+}
+
+@keyframes spinLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
