@@ -63,7 +63,7 @@ const searchWeather = (ev) => {
         ELEMENTS.LOADER.classList.add("d-none");
         ELEMENTS.RESULT.insertAdjacentHTML("beforebegin", '<p id="js-form-weather-warning-message" class="Text f-bold c-warning mt-20 mb-20">' + error + "</p>");
       });
-  }, 400);
+  }, 200);
 };
 
 ELEMENTS.BUTTON_SUBMIT.addEventListener("click", searchWeather);
