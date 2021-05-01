@@ -26,6 +26,10 @@
     &:hover {
       background-color: darken(color(primary), 5%);
     }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 1px $white;
+    }
   }
 
   &--secondary {
@@ -33,6 +37,10 @@
 
     &:hover {
       background-color: darken(color(secondary), 5%);
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 1px $white;
     }
   }
 }
